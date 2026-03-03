@@ -7,22 +7,22 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Endereço",
-    details: "Rua Exemplo, 123 - Centro, Cidade - UF",
+    details: "Rua Vera Cruz, 194 - Parque Guadalajara, Caucaia - CE",
   },
   {
     icon: Phone,
     title: "Telefone",
-    details: "(00) 00000-0000",
+    details: "(85) 98125-0926",
   },
   {
     icon: Mail,
     title: "E-mail",
-    details: "contato@renoveestamparia.com.br",
+    details: "renoveestamparia@gmail.com",
   },
   {
     icon: Clock,
     title: "Horário",
-    details: "Seg - Sex: 8h às 18h | Sáb: 8h às 12h",
+    details: "Seg - Sex: 9h às 18h | Sáb: 9h às 12h",
   },
 ]
 
@@ -39,7 +39,7 @@ export default function ContactSection() {
     e.preventDefault()
     const whatsappMessage = `Olá! Me chamo ${formData.name}.\n\nServiço: ${formData.service}\n\n${formData.message}\n\nE-mail: ${formData.email}\nTelefone: ${formData.phone}`
     const encoded = encodeURIComponent(whatsappMessage)
-    window.open(`https://wa.me/5500000000000?text=${encoded}`, "_blank")
+    window.open(`https://wa.me/5585981250926?text=${encoded}`, "_blank")
   }
 
   return (

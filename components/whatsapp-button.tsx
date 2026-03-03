@@ -38,7 +38,7 @@ export default function WhatsAppButton() {
 
       {/* WhatsApp button */}
       <a
-        href="https://wa.me/5500000000000?text=Olá! Gostaria de fazer um orçamento."
+        href="https://wa.me/5585981250926?text=Olá! Gostaria de fazer um orçamento."
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-pulse-glow"
