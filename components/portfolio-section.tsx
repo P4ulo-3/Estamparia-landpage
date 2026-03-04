@@ -13,7 +13,7 @@ const portfolioItems = [
     tech: "Sublimação",
   },
   {
-    image: "/images/custom-mug.jpg",
+    image: "/images/Caneca-Personalizada.png",
     title: "Canecas Personalizadas",
     category: "Canecas",
     tech: "Sublimação",
