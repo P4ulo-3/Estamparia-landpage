@@ -59,7 +59,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/5500000000000"
+            href="https://wa.me/5585981250926"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground font-sans font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-primary/25"
@@ -104,5 +104,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react"
+import { useState } from "react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 
 const contactInfo = [
   {
@@ -24,7 +24,7 @@ const contactInfo = [
     title: "Horário",
     details: "Seg - Sex: 9h às 18h | Sáb: 9h às 12h",
   },
-]
+];
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -33,14 +33,20 @@ export default function ContactSection() {
     phone: "",
     service: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    const whatsappMessage = `Olá! Me chamo ${formData.name}.\n\nServiço: ${formData.service}\n\n${formData.message}\n\nE-mail: ${formData.email}\nTelefone: ${formData.phone}`
-    const encoded = encodeURIComponent(whatsappMessage)
-    window.open(`https://wa.me/5585981250926?text=${encoded}`, "_blank")
-  }
+    e.preventDefault();
+    const whatsappMessage = `Olá! Me chamo ${formData.name}.\n\nServiço: ${formData.service}\n\n${formData.message}\n\nE-mail: ${formData.email}\nTelefone: ${formData.phone}`;
+    const encoded = encodeURIComponent(whatsappMessage);
+    window.open(`https://wa.me/5585981250926?text=${encoded}`, "_blank");
+  };
+
+  const address =
+    contactInfo.find((c) => c.title === "Endereço")?.details ||
+    contactInfo[0].details;
+
+  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 
   return (
     <section id="contato" className="py-24 bg-background">
@@ -82,14 +88,16 @@ export default function ContactSection() {
               ))}
             </div>
 
-            {/* Map placeholder */}
-            <div className="mt-8 rounded-2xl overflow-hidden h-64 bg-secondary border border-border flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-10 h-10 text-primary mx-auto mb-2" />
-                <p className="font-sans text-sm text-muted-foreground">
-                  Renove Estamparia - Centro, Cidade
-                </p>
-              </div>
+            {/* Map */}
+            <div className="mt-8 rounded-2xl overflow-hidden h-64 bg-secondary border border-border">
+              <iframe
+                src={mapSrc}
+                className="w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Mapa - Renove Estamparia"
+              />
             </div>
           </div>
 
@@ -234,5 +242,5 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
