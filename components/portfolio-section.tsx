@@ -7,7 +7,7 @@ const categories = ["Todos", "Camisetas", "Canecas", "Brindes", "Eventos"]
 
 const portfolioItems = [
   {
-    image: "/images/hero-tshirt.jpg",
+    image: "/images/eco-bag.jpg",
     title: "Camisetas Corporativas",
     category: "Camisetas",
     tech: "Sublimação",
